@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+        <!-- css -->
+    <style>
+        form {
+            padding: 20px;
+        }
+        #input {
+            width: 150px;
+            height: 30px;
+            font-size: 18px;
+            text-align: center;
+        }
+        #check {
+            margin-left: 15px;
+            width: 100px;
+            height: 30px;
+        }
+        #result {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form >
+        <h1>Giá hoa quả</h1>
+        <select id="input">
+            <option value="Ổi">Ổi</option>
+            <option value="Dưa hấu">Dưa hấu</option>
+            <option value="Táo">Táo</option>
+            <option value="Xoài">Xoài</option>
+            <option value="Cam">Cam</option>
+            <option value="Chôm chôm">Chôm chôm</option>
+            <option value="Măng cụt">Măng cụt</option>
+        </select>
+        <button type="button" id="check">Kiểm tra</button>
+        <br>
+        <p id="result"></p>
+    </form>
+
+                              <!-- main -->
+    <script>
+        document.getElementById("check").addEventListener("click", function() {
+            var input = document.getElementById("input").value;
+
+            // Kiểm tra so sánh input và hiển thị giá.
+            switch (input) {
+                case "Ổi":
+                    document.getElementById("result").innerText = "20,000 VND/kg";
+                    break;
+                case "Dưa hấu":
+                    document.getElementById("result").innerText = "20,000 VND/kg";
+                    break;
+                case "Táo":
+                    document.getElementById("result").innerText = "30,000 VND/kg";
+                    break;
+                case "Xoài":
+                    document.getElementById("result").innerText = "30,000 VND/kg";
+                    break;
+                case "Cam":
+                    document.getElementById("result").innerText = "40,000 VND/kg";
+                    break;
+                case "Chôm chôm":
+                    document.getElementById("result").innerText = "40,000 VND/kg";
+                    break;
+                case "Măng cụt":
+                    document.getElementById("result").innerText = "50,000 VND/kg";
+                    break;
+            }
+        })
+    </script>
+
+</body>
+</html>
